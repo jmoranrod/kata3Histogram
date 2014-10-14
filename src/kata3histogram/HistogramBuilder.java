@@ -3,6 +3,9 @@ package kata3histogram;
 public class HistogramBuilder <Type> {
     
     public Histogram<Type> build(Type[] types){
-        return null;
+        Histogram<Type> histogram = new Histogram<>();
+        for (Type type : types) 
+                histogram.put(type, histogram.get(type) + 1); 
+        return histogram;
     }
 }
